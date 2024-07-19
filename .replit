@@ -1,10 +1,8 @@
-compile = ["erlc", "main.erl"]
+compile = ["make", "all"]
 
-run = ["erl", "-noshell", "-s", "main", "start", "-s", "init", "stop"]
+run = ["make", "shell"]
 
-hidden = ["**/*.beam"]
-
-entrypoint = "main.erl"
+entrypoint = "src/vlm.erl"
 
 [nix]
 channel = "stable-23_11"
