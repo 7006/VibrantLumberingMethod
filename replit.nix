@@ -1,7 +1,6 @@
 { pkgs }: {
 	deps = [
-    pkgs.erlang
-		pkgs.erlang-ls
-		pkgs.rebar3
+		pkgs.erlang
+		pkgs.erlfmt
 	];
 }

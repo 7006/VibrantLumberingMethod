@@ -1,17 +1,15 @@
-compile = ["make", "all"]
-
-run = ["make", "shell"]
-
+language = "erlang"
+compile = "make"
+run = "make shell"
 entrypoint = "src/vlm.erl"
+modules = ["nix"]
+
+[gitHubImport]
+requiredFiles = [".replit", "replit.nix"]
 
 [nix]
-channel = "stable-23_11"
+channel = "stable-24_05"
 
-# Disabled for now, erlang_ls starts a server
-# https://github.com/erlang-ls/erlang_ls/issues/1416
-# [languages]
-# [languages.erlang]
-# pattern = "**/{*.erl,*.hrl}"
-
-# [languages.erlang.languageServer]
-# start = "erlang_ls --log-level error --transport stdio"
+[deployment]
+build = ":"
+run = ":"
