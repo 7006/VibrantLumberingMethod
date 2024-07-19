@@ -1,7 +1,6 @@
 language = "erlang"
 compile = "make"
 run = "make shell"
-entrypoint = "src/vlm.erl"
 modules = ["nix"]
 
 [gitHubImport]
@@ -11,5 +10,5 @@ requiredFiles = [".replit", "replit.nix"]
 channel = "stable-24_05"
 
 [deployment]
-build = ":"
-run = ":"
+build = ["sh", "-c", "make"]
+run = ["sh", "-c", "make shell"]
